@@ -52,6 +52,6 @@ class ExampleTest extends TestCase
         $g = 2.5;
         $h = 2.5;
         $result = app('App\Http\Controllers\OperationControl')->Multiplicardec($g,$h);
-        $this->assertIsFloat(6.25, $result);
+        $this->assertIsFloat(6, $result);
     }
 }
