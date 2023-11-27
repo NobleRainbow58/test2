@@ -24,7 +24,7 @@ class ExampleTest extends TestCase
 */
     public function testRestar():void
     {   
-        $a = 5;
+        $a = 9;
         $b = 3;
         $result = app('App\Http\Controllers\OperationControl')->Restar($a,$b);
         $this->assertSame(2, $result);
@@ -41,17 +41,17 @@ class ExampleTest extends TestCase
 
     public function testDividir():void
     {   
-        $e = 10;
-        $f = 2;
+        $e = 100;
+        $f = 50;
         $result = app('App\Http\Controllers\OperationControl')->Dividir($e,$f);
         $this->assertLessThanOrEqual(5, $result);
     }
 
     public function testMultiplicarDecimal():void
     {   
-        $g = 2.5;
-        $h = 2.5;
+        $g = 2;
+        $h = 2;
         $result = app('App\Http\Controllers\OperationControl')->Multiplicardec($g,$h);
-        $this->assertIsFloat(6, $result);
+        $this->assertIsFloat($result);
     }
 }
